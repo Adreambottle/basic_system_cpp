@@ -8,24 +8,50 @@
 
 #include "Cl_ASCII.hpp"
 
-void read()
+//struct ASCII_item{
+//
+//    ASCII_item() = default;
+//    ASCII_item(const std::string &s, const char &ch, const unsigned &i): code_by2(s), value(ch), idx(i){}
+//
+//    std::string code_by2 = "00000000";
+//    char value = ' ';
+//    unsigned idx;
+//
+//    vector<char> code_vec();
+//
+//};
+
+//ASCII_item as = {"01110100", 'a', 97};
+
+void read_ASCII(vector<ASCII_item> & ascii_vec)
 {
 //    ifstream myfile("/Basic_system/ASCII_table.csv");
     ifstream myfile("/Users/Daniel/Documents/GitHub/basic_system_cpp/basic_system_cpp/ASCII_table.csv");
 
-    vector<string> ASCII_vec;
-//    ofstream outfile("G:\\C++ project\\Read\\out.txt", ios::app);
     string temp;
-    if (!myfile.is_open())
-    {
+    if (!myfile.is_open()){
         cout << "未成功打开文件" << endl;
     }
-    while(getline(myfile,temp))
-    {
-        ASCII_vec.push_back(temp);
-        cout << temp << endl;
+    int num = 1;
+    while(getline(myfile, temp)){
+        ASCII_item ascii_i(temp.substr(0, 8), temp[9], num++);
+        ascii_vec.push_back(ascii_i);
+//        cout << temp.substr(0, 8) << endl;
     }
     myfile.close();
-//    outfile.close();
+
+//    return ASCII_vec
 }
+
+
+vector<char> ASCII_item::code_vec(){
+    vector<char> vec_char;
+    for (auto c : code_by2){
+        vec_char.push_back(c);
+    }
+    return vec_char;
+}
+
+
+
 

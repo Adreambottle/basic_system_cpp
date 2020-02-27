@@ -12,6 +12,9 @@
 #include "Header.h"
 #include "Cl_RAM.cpp"
 #include "Cl_ASCII.hpp"
+//#include "Cl_ASCII.cpp"
+
+
 
 //#include "BIOS.cpp"
 //#include "Cl_Byte.cpp"
@@ -40,7 +43,7 @@ int main() {
 //    getcwd(buffer, MAXPATH);
 //    printf("The current directory is: %s", buffer);
 
-//    read();
+//    read_ASCII();
     
 
 //    Byte_mgt bm;
@@ -50,7 +53,16 @@ int main() {
 //
     
 
-
+    vector<ASCII_item> ai;
+    read_ASCII(ai);
+    ai[0].code_by2 = "00000000";
+    ai[0].value = ' ';
+    
+    for(auto item : ai){
+        cout << "by2 is " << item.code_by2
+        << " value is " << item.value
+        << " index is " << item.idx << endl;
+    }
     
     
 //    RAM test_RAM;
