@@ -21,7 +21,7 @@ public:
     vector<bool> contents = {0, 0, 0, 0, 0, 0, 0, 0};
     const short sz = 8;
     bool used = false;
-    vector<int> address;
+    int address = 0;
     
 };
 
@@ -35,7 +35,10 @@ inline
        << contents[4] << " "
        << contents[5] << " "
        << contents[6] << " "
-       << contents[7] << " " << endl;
+       << contents[7] << " "
+       << "\t"
+       << address << "\t"
+       << (used ? "used" : "unused") << endl;
     return os;
 }
 

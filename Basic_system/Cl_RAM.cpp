@@ -6,14 +6,16 @@
 //  Copyright © 2020 Daniel. All rights reserved.
 //
 
+//
+
 #include "Cl_RAM.hpp"
 #include "Cl_Byte.cpp"
 
 class RAM{
 
 public:
-    RAM & start();
-    RAM & restart();
+    RAM & start();     // Start the RAM
+    RAM & restart();   // resart the RAM
     RAM & change_length(int new_length_num);
     RAM & change_layer(int new_layer_num);
     
@@ -34,11 +36,16 @@ public:
 };
 
 
+
+
 inline
 RAM & RAM::start(){
+    int count = 0;
     for(int i = 0; i != length_num; ++i){
         Byte bt;
+        bt.address = count;
         contents.push_back(bt);
+        ++ count;
     }
     return *this;
 }
