@@ -7,20 +7,42 @@
 //
 
 #include "Cl_RAM.hpp"
+#include "Cl_Byte.cpp"
 
 class RAM{
 
 public:
+    RAM & start();
+    RAM & restart();
     RAM & change_length(int new_length_num);
     RAM & change_layer(int new_layer_num);
+    
+    
 
-private:
+public:
 
 //    const short unit_num = 8;
-    int length_num;
+    int length_num = 1024;
     int layer_num = 3;
+    vector<Byte> contents;
+    
+//    for(int i = 0; i != 10; ++i){
+//        Byte bt;
+//        contents.push_back(bt);
+//    }
 
 };
+
+
+inline
+RAM & RAM::start(){
+    for(int i = 0; i != length_num; ++i){
+        Byte bt;
+        contents.push_back(bt);
+    }
+    return *this;
+}
+
 
 inline
 RAM & RAM::change_length(int new_length_num){
@@ -36,42 +58,3 @@ RAM & RAM::change_layer(int new_layer_num){
 
 
 
-
-class Byte{
-
-    
-    
-public:
-    
-    const ostream &show_contents(ostream &os) const;
-    Byte & change_contents(const short &ix, bool new_item);
-    
-    vector<bool> contents = {0, 0, 0, 0, 0, 0, 0, 0};
-    const short sz = 8;
-    bool used = false;
-    vector<int> address;
-    
-};
-
-
-inline
-    const ostream &Byte::show_contents(ostream &os) const {
-    os << "The contents of this bytes is: " << "\n"
-       << contents[0] << " "
-       << contents[1] << " "
-       << contents[2] << " "
-       << contents[3] << " "
-       << contents[4] << " "
-       << contents[5] << " "
-       << contents[6] << " "
-       << contents[7] << " " << endl;
-    return os;
-}
-
-
-inline
-Byte & Byte::change_contents(const short &ix, bool new_item){
-    if (ix < 8 && ix >= 0)
-        contents[ix] = new_item;
-    return *this;
-}

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6599458A2407BEE8001C46D1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 659945892407BEE8001C46D1 /* main.cpp */; };
 		659945932407BFAA001C46D1 /* Cl_RAM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 659945912407BFAA001C46D1 /* Cl_RAM.cpp */; };
+		659945962407C0F6001C46D1 /* BIOS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 659945942407C0F6001C46D1 /* BIOS.cpp */; };
+		659945992407C423001C46D1 /* Cl_Byte.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 659945972407C423001C46D1 /* Cl_Byte.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,10 @@
 		659945902407BFAA001C46D1 /* Cl_RAM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cl_RAM.hpp; sourceTree = "<group>"; };
 		659945912407BFAA001C46D1 /* Cl_RAM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cl_RAM.cpp; sourceTree = "<group>"; };
 		659945922407BFAA001C46D1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		659945942407C0F6001C46D1 /* BIOS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BIOS.cpp; sourceTree = "<group>"; };
+		659945952407C0F6001C46D1 /* BIOS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BIOS.hpp; sourceTree = "<group>"; };
+		659945972407C423001C46D1 /* Cl_Byte.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cl_Byte.cpp; sourceTree = "<group>"; };
+		659945982407C423001C46D1 /* Cl_Byte.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cl_Byte.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 			children = (
 				659945892407BEE8001C46D1 /* main.cpp */,
 				659945912407BFAA001C46D1 /* Cl_RAM.cpp */,
+				659945972407C423001C46D1 /* Cl_Byte.cpp */,
+				659945982407C423001C46D1 /* Cl_Byte.hpp */,
+				659945942407C0F6001C46D1 /* BIOS.cpp */,
+				659945952407C0F6001C46D1 /* BIOS.hpp */,
 				659945902407BFAA001C46D1 /* Cl_RAM.hpp */,
 				659945922407BFAA001C46D1 /* Header.h */,
 			);
@@ -126,7 +136,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659945962407C0F6001C46D1 /* BIOS.cpp in Sources */,
 				6599458A2407BEE8001C46D1 /* main.cpp in Sources */,
+				659945992407C423001C46D1 /* Cl_Byte.cpp in Sources */,
 				659945932407BFAA001C46D1 /* Cl_RAM.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

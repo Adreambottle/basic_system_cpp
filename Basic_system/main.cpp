@@ -15,10 +15,23 @@
 
 
 int main() {
-    Byte test1;
-    test1.change_contents(4, 1);
-    test1.show_contents(cout);
+//    Byte test1;
+//    vector<Byte> test_vec;
+//    for(int i = 0; i != 10; ++i){
+//        Byte bt;
+//        bt.show_contents(cout);
+//        test_vec.push_back(bt);
+//
+//    }
+
+    RAM test_RAM;
+    test_RAM.start();
     
+    for(auto item : test_RAM.contents){
+        item.show_contents(cout);
+    }
+        
+
     return 0;
 }
 
