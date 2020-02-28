@@ -17,7 +17,7 @@
     *     RAM 运行内存；
     *     ROM 只读储存器；
     *     指令集 （Fake ROM）
-    
+
 #### RAM
 1. 结构：
     * 内存中所有的数据都是 0 或 1，这样的**二元**数据；
@@ -36,10 +36,10 @@
 
 4. 内存大小：
     如果需要在RAM中暂存的**数据超过了内存或者内存分区的大小**，需要怎么办？
-    
+
 #### ROM
 * 结构与RAM基本相同，区别在于能够**永久储存**数据。
- 
+
 * input 与 output 在 ROM 中的数据怎么才能**传入**到 RAM 中去；在 RAM 中的数据怎么**写入**到 ROM 中来。
 
 * 文件储存的形式，如何生成新的文件，如何储存？
@@ -60,13 +60,13 @@
 
 * PS2:因为我也不是很懂这方面的东西，肯定会有很多疏漏之处，所以希望大家能够一起来丰富这部分的内容！
 
-  
-  
-  
-  
+
+
+
+
 -------
-  
-  
+
+
 
 
 ### 二、指令集结构
@@ -118,7 +118,11 @@
 * 需要获取外部系统的鼠标位置和硬盘输入。
 
 ##### (5) Visualization
-* 比如系统需要使用什么字体
+Solutions    | Advantages | Disadvantages | Decision
+------------ | ---------- | ------------- | --------
+(1) Command line | Simple!  | Worst visual aid | Just in case...the other two are too difficult :sweat_smile:
+(2) User Interface markup language | Plenty of supporting libraries; easy implementation | Not C++ | I'll try it out anyways
+(3) C++ Web Development Framework  | Using C++, recommended by prof :+1: | Less supporting resources | Let's do this
 
 ##### (6) Exception
 * 程序异常怎么处理？
@@ -133,7 +137,3 @@
 * 如何按照文件夹来储存，如何确定储存地址？
 
 ##### (9) ...
-
-
-    
-
