@@ -122,7 +122,16 @@ Solutions    | Advantages | Disadvantages | Decision
 ------------ | ---------- | ------------- | --------
 (1) Command line | Simple!  | Worst visual aid | Just in case...the other two are too difficult :sweat_smile:
 (2) User Interface markup language | Plenty of supporting libraries; easy implementation | Not C++ | I'll try it out anyways
-(3) C++ Web Development Framework  | Using C++, recommended by prof :+1: | Less supporting resources | Let's do this
+(3) C++ Web Development Framework  | Using C++, recommended by prof :+1: | Less supporting resources | Save this for later
+(4) Qt GUI widgets  | Using C++, recommended by prof :+1:, comes with Qt Creator |  | Let's do this
+
+##### Proposal
+1. Strategy
+  * Coding the user interface of simulated operating system using pure C++ code
+  * Making use of Qt GUI libraries and widgets
+  * Simplicity > Functionality > Appearance at the first stage
+2. Sample result
+![sample_result](Images/Sample user interface.jpg)
 
 
 
