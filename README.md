@@ -99,41 +99,45 @@
 
 * 如何让 OS 在0和1与数字字母两种方式中进行转换？
 
-#### 代码库
-##### (1) Test application
+#### 代码库/Code Implementation
+##### 1. Test application
 * 需要用来跑的应用，比如说计算器，扫雷，时钟。
 * 考虑一下我们的系统只能对 0 和 1 进行操作，所以不能太复杂
 
-##### (2) Input and Output function
+##### 2. Input and Output function
 * Application 中传入和传出的数据怎么在内存中读取和吸入，指向内存中的哪一个部分。
 * 是否需要一个统一的端口来统一控制应用I&O。
 
-##### (3) Multiprocess
+##### 3. Multiprocess
 * Multiprocess 的集中情况
 * one by one
 * random
 * drill 像转盘一样
 
-##### (4) Reference of mouse and key
+##### 4. Reference of mouse and key
 * 需要获取外部系统的鼠标位置和硬盘输入。
 
-##### (5) Visualization
+##### 5. GUI
 Solutions    | Advantages | Disadvantages | Decision
 ------------ | ---------- | ------------- | --------
 (1) Command line | Simple!  | Worst visual aid | Just in case...the other two are too difficult :sweat_smile:
 (2) User Interface markup language | Plenty of supporting libraries; easy implementation | Not C++ | I'll try it out anyways
 (3) C++ Web Development Framework  | Using C++, recommended by prof :+1: | Less supporting resources | Let's do this
 
-##### (6) Exception
+
+
+##### 6. Exception
 * 程序异常怎么处理？
 * 模拟硬件 RAM 中断怎么处理？
 
-##### (7) Security
+##### 7. Security
 * 是否需要用户控制？
 * 是否需要加密？
 
-##### (8) Storage Path
+##### 8. Storage Path
 * 在写入 ROM 里面的数据，是否需要自己的储存路径？
 * 如何按照文件夹来储存，如何确定储存地址？
 
-##### (9) ...
+##### 9. ...
+
+#####
