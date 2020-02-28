@@ -23,6 +23,11 @@
 
 //ASCII_item as = {"01110100", 'a', 97};
 
+
+
+
+
+// Input the ascii_file from the repository by it seems no use now.
 void read_ASCII(vector<ASCII_item> & ascii_vec)
 {
 //    ifstream myfile("/Basic_system/ASCII_table.csv");
@@ -32,7 +37,7 @@ void read_ASCII(vector<ASCII_item> & ascii_vec)
     if (!myfile.is_open()){
         cout << "未成功打开文件" << endl;
     }
-    int num = 1;
+    int num = 0;   // This is the value by 10
     while(getline(myfile, temp)){
         ASCII_item ascii_i(temp.substr(0, 8), temp[9], num++);
         ascii_vec.push_back(ascii_i);
@@ -44,6 +49,9 @@ void read_ASCII(vector<ASCII_item> & ascii_vec)
 }
 
 
+
+// Show the ascii_item binary code like a vector. Maybe it is convenient to compare with the value of RAM.
+inline
 vector<char> ASCII_item::code_vec(){
     vector<char> vec_char;
     for (auto c : code_by2){
@@ -54,4 +62,68 @@ vector<char> ASCII_item::code_vec(){
 
 
 
+//inline
+//const ostream ASCII_item::show(ostream &os) const{
+//    os << "by2 is " << code_by2
+//    << " value is " << value
+//    << " index is " << idx << endl;
+////    return os;
+//    return os
+//}
+//
+//inline
+//void ASCII_item::show() const{
+//    cout << "by2 is " << code_by2
+//    << " value is " << value
+//    << " index is " << idx << endl;
+//}
+
+
+
+
+
+
+// Changing character into binary system
+// Unfinished
+
+string char_to_binary(const char &ch){
+    string by2;
+    switch (ch) {
+        case 'a':
+            by2 = "01100001";
+            break;
+        case 'b':
+            by2 = "01100010";
+            break;
+            
+        default:
+            by2 = "00000000";
+            break;
+    }
+    return by2;
+};
+
+
+
+
+
+
+// Changing binary system into character
+// Unfinished
+
+char binary_to_char(const string & by2){
+    int i = std::stoi(by2, nullptr, 2);
+    char ch;
+    switch (i) {
+        case 97:
+            ch = 'a';
+            break;
+
+        default:
+            ch = ' ';
+            break;
+    }
+
+    return ch;
+}
 

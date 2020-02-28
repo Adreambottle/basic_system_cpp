@@ -10,35 +10,13 @@
 
 #include "Cl_RAM.hpp"
 #include "Cl_Byte.cpp"
-//#include "Cl_ASCII.cpp"
-
-
-class RAM{
-
-public:
-    RAM & start();     // Start the RAM
-    RAM & restart();   // resart the RAM
-    RAM & change_length(int new_length_num);
-    RAM & change_layer(int new_layer_num);
-    
-    
-
-public:
-
-//    const short unit_num = 8;
-    int length_num = 1024;
-    int layer_num = 3;
-    vector<Byte> contents;
-    
-//    for(int i = 0; i != 10; ++i){
-//        Byte bt;
-//        contents.push_back(bt);
-//    }
-
-};
 
 
 
+
+
+
+// Start the RAM
 
 inline
 RAM & RAM::start(){
@@ -53,17 +31,20 @@ RAM & RAM::start(){
 }
 
 
+// change the length of the RAM
 inline
 RAM & RAM::change_length(int new_length_num){
     length_num = new_length_num;
     return *this;
 }
 
+
+
+// change the layer of the RAM 
 inline
 RAM & RAM::change_layer(int new_layer_num){
     layer_num = new_layer_num;
     return *this;
 }
-
 
 
