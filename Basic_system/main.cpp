@@ -57,15 +57,14 @@ int main() {
     RAM ram;
     ram.start();
     int count = 100;
-    string s = "This is a test string";
-    for(int i = 0; i < count; ++i){
+    string s = "Zhou Yanan is the king of the world";
+    for(int i = 0; i != count; ++i){
         Byte bt = ram.contents[i];
         change_byte_by_char(bt, s[i]);
         bt.show_contents(cout);
-        if (i > s.size())
+        if (i >= s.size()-1)
             break;
     }
-    
     
     
 //    const int MAXPATH=250;
