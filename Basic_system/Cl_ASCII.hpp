@@ -44,6 +44,7 @@ void read_ASCII(vector<ASCII_item> & ascii_vec);
 
 // two function of change binary string into character. But it is too long to finish.
 string char_to_binary(const char & ch);
+string char_to_binary_sys(const char &ch);
 char binary_to_char(const string & by2);
 
 

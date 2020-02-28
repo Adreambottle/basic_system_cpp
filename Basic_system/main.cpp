@@ -11,8 +11,9 @@
 #include <unistd.h>
 #include "Header.h"
 #include "Cl_RAM.cpp"
-#include "Cl_Byte.hpp"
-#include "Cl_ASCII.hpp"
+//#include "Cl_Byte.hpp"
+
+//#include "Cl_ASCII.hpp"
 //#include "Cl_ASCII.cpp"
 
 
@@ -21,6 +22,19 @@
 //#include "Cl_Byte.cpp"
 
 
+
+
+
+
+void change_byte_by_char(Byte & bt, const char & ch){
+    string by2 = char_to_binary_sys(ch);
+    int count = 0;
+    for (auto item : by2){
+        bool bool_value = ((item == '0') ? false : true);
+        bt.change_contents(count, bool_value);
+        count++;
+    }
+};
 
 
 void input_1(Byte &bt){
@@ -34,19 +48,23 @@ int main() {
     
     
     
-    Byte test_bt;
-    test_bt.change_contents(1, 1);
-    test_bt.change_contents(2, 1);
-    test_bt.change_contents(7, 1);
-
-    test_bt.show_contents(cout);
     
-    string sa = char_to_binary('a');
-    cout << sa << endl;
     
-    char i = binary_to_char("01100001");
-    cout << i << endl;
+//    Byte bt1;
+//    change_byte_by_char(bt1, 'a');
+//    bt1.show_contents(cout);
     
+    RAM ram;
+    ram.start();
+    int count = 100;
+    string s = "This is a test string";
+    for(int i = 0; i < count; ++i){
+        Byte bt = ram.contents[i];
+        change_byte_by_char(bt, s[i]);
+        bt.show_contents(cout);
+        if (i > s.size())
+            break;
+    }
     
     
     

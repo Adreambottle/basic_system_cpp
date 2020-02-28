@@ -84,7 +84,6 @@ vector<char> ASCII_item::code_vec(){
 
 
 // Changing character into binary system
-// Unfinished
 
 string char_to_binary(const char &ch){
     string by2;
@@ -103,6 +102,23 @@ string char_to_binary(const char &ch){
     return by2;
 };
 
+
+// Changing character into binary system by system
+// 用系统自带的 char -> int.10 -> int.2
+
+string char_to_binary_sys(const char &ch){
+    int num = (int)ch;
+    
+    string by2 = "00000000";
+    for(int i = 8; i >= 0; i--){
+        if(num & (1<<i))
+            by2[7-i] = '1';
+        else
+            by2[7-i] = '0';
+    }
+    
+    return by2;
+}
 
 
 
@@ -127,3 +143,4 @@ char binary_to_char(const string & by2){
     return ch;
 }
 
+// 想一个 int.2 -> int.10 -> char 的方法

@@ -72,7 +72,14 @@ Byte & Byte::change_contents(const short &ix, bool new_item){
 }
 
 
-
+//void change_byte_by_char(Byte & bt, const char & ch){
+//    string by2 = char_to_binary_sys(ch);
+//    int count = 0;
+//    for (auto item : by2){
+//        bool bool_value = ((item == '0') ? false : true);
+//        bt.change_contents(count, bool_value);
+//    }
+//};
 
 
 // 这部分有点问题，本来是想要写一个 Byte 的管理类的，但是好像发现这个不能这么写，一直报错，所以o我就把部分代码挪入到 Byte 类中去了，估计

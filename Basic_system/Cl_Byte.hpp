@@ -9,8 +9,13 @@
 #ifndef Cl_Byte_h
 #define Cl_Byte_h
 
+
 #include <stdio.h>
 #include "Header.h"
+#include "Cl_ASCII.hpp"
+
+
+
 
 
 
@@ -42,5 +47,7 @@ public:
     
 };
 
+
+//void change_byte_by_char(Byte & bt, const char & ch);
 
 #endif /* Cl_Byte_hpp */
