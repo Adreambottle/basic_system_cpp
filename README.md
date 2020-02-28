@@ -17,7 +17,7 @@
     *     RAM 运行内存；
     *     ROM 只读储存器；
     *     指令集 （Fake ROM）
-    
+
 #### RAM
 1. 结构：
     * 内存中所有的数据都是 0 或 1，这样的**二元**数据；
@@ -36,10 +36,10 @@
 
 4. 内存大小：
     如果需要在RAM中暂存的**数据超过了内存或者内存分区的大小**，需要怎么办？
-    
+
 #### ROM
 * 结构与RAM基本相同，区别在于能够**永久储存**数据。
- 
+
 * input 与 output 在 ROM 中的数据怎么才能**传入**到 RAM 中去；在 RAM 中的数据怎么**写入**到 ROM 中来。
 
 * 文件储存的形式，如何生成新的文件，如何储存？
@@ -60,13 +60,13 @@
 
 * PS2:因为我也不是很懂这方面的东西，肯定会有很多疏漏之处，所以希望大家能够一起来丰富这部分的内容！
 
-  
-  
-  
-  
+
+
+
+
 -------
-  
-  
+
+
 
 
 ### 二、指令集结构
@@ -99,41 +99,45 @@
 
 * 如何让 OS 在0和1与数字字母两种方式中进行转换？
 
-#### 代码库
-##### (1) Test application
+#### 代码库/Code Implementation
+##### 1. Test application
 * 需要用来跑的应用，比如说计算器，扫雷，时钟。
 * 考虑一下我们的系统只能对 0 和 1 进行操作，所以不能太复杂
 
-##### (2) Input and Output function
+##### 2. Input and Output function
 * Application 中传入和传出的数据怎么在内存中读取和吸入，指向内存中的哪一个部分。
 * 是否需要一个统一的端口来统一控制应用I&O。
 
-##### (3) Multiprocess
+##### 3. Multiprocess
 * Multiprocess 的集中情况
 * one by one
 * random
 * drill 像转盘一样
 
-##### (4) Reference of mouse and key
+##### 4. Reference of mouse and key
 * 需要获取外部系统的鼠标位置和硬盘输入。
 
-##### (5) Visualization
-* 比如系统需要使用什么字体
+##### 5. GUI
+Solutions    | Advantages | Disadvantages | Decision
+------------ | ---------- | ------------- | --------
+(1) Command line | Simple...:laughing:  | Worst visual aid | :heavy_multiplication_x:
+(2) User Interface markup language | Plenty of supporting libraries; easy implementation | Not C++ | :heavy_multiplication_x:
+(3) C++ Web Development Framework  | Using C++, recommended by prof :+1: | Less supporting resources | :heavy_check_mark:
 
-##### (6) Exception
+
+
+##### 6. Exception
 * 程序异常怎么处理？
 * 模拟硬件 RAM 中断怎么处理？
 
-##### (7) Security
+##### 7. Security
 * 是否需要用户控制？
 * 是否需要加密？
 
-##### (8) Storage Path
+##### 8. Storage Path
 * 在写入 ROM 里面的数据，是否需要自己的储存路径？
 * 如何按照文件夹来储存，如何确定储存地址？
 
-##### (9) ...
+##### 9. ...
 
-
-    
-
+#####
