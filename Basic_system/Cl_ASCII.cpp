@@ -6,7 +6,7 @@
 //  Copyright © 2020 Daniel. All rights reserved.
 //
 
-#include "Cl_ASCII.hpp"
+#include "Cl_ASCII.h"
 
 //struct ASCII_item{
 //
@@ -105,42 +105,42 @@ string char_to_binary(const char &ch){
 
 // Changing character into binary system by system
 // 用系统自带的 char -> int.10 -> int.2
-
-string char_to_binary_sys(const char &ch){
-    int num = (int)ch;
-    
-    string by2 = "00000000";
-    for(int i = 8; i >= 0; i--){
-        if(num & (1<<i))
-            by2[7-i] = '1';
-        else
-            by2[7-i] = '0';
-    }
-    
-    return by2;
-}
-
-
-
-
-
-// Changing binary system into character
-// Unfinished
-
-char binary_to_char(const string & by2){
-    int i = std::stoi(by2, nullptr, 2);
-    char ch;
-    switch (i) {
-        case 97:
-            ch = 'a';
-            break;
-
-        default:
-            ch = ' ';
-            break;
-    }
-
-    return ch;
-}
-
-// 想一个 int.2 -> int.10 -> char 的方法
+//
+//string char_to_binary_sys(const char &ch){
+//    int num = (int)ch;
+//
+//    string by2 = "00000000";
+//    for(int i = 8; i >= 0; i--){
+//        if(num & (1<<i))
+//            by2[7-i] = '1';
+//        else
+//            by2[7-i] = '0';
+//    }
+//
+//    return by2;
+//}
+//
+//
+//
+//
+//
+//// Changing binary system into character
+//// Unfinished
+//
+//char binary_to_char(const string & by2){
+//    int i = std::stoi(by2, nullptr, 2);
+//    char ch;
+//    switch (i) {
+//        case 97:
+//            ch = 'a';
+//            break;
+//
+//        default:
+//            ch = ' ';
+//            break;
+//    }
+//
+//    return ch;
+//}
+//
+//// 想一个 int.2 -> int.10 -> char 的方法

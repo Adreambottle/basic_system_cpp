@@ -10,5 +10,9 @@
 #define BIOS_hpp
 
 #include <stdio.h>
+#include "Header.h"
+//#include "Cl_RAM.hpp"
+#include "Cl_Byte.h"
+
 
 #endif /* BIOS_hpp */

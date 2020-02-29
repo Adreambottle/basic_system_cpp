@@ -7,40 +7,8 @@
 //
 
 
-#include <iostream>
-#include <unistd.h>
-#include "Header.h"
-#include "Cl_RAM.cpp"
-//#include "Cl_Byte.hpp"
 
-//#include "Cl_ASCII.hpp"
-//#include "Cl_ASCII.cpp"
-
-
-
-//#include "BIOS.cpp"
-//#include "Cl_Byte.cpp"
-
-
-
-
-
-
-void change_byte_by_char(Byte & bt, const char & ch){
-    string by2 = char_to_binary_sys(ch);
-    int count = 0;
-    for (auto item : by2){
-        bool bool_value = ((item == '0') ? false : true);
-        bt.change_contents(count, bool_value);
-        count++;
-    }
-};
-
-
-void input_1(Byte &bt){
-    bt.change_contents(7, 1);
-    bt.used = 1;
-};
+#include "F_code_library.h"
 
 
 

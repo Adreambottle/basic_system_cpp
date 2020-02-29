@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "Header.h"
-#include "Cl_Byte.hpp"
+#include "Cl_Byte.h"
 
 
 class RAM{
@@ -30,11 +30,6 @@ public:
     int length_num = 1024;
     int layer_num = 3;
     vector<Byte> contents;
-    
-//    for(int i = 0; i != 10; ++i){
-//        Byte bt;
-//        contents.push_back(bt);
-//    }
 
 };
 
