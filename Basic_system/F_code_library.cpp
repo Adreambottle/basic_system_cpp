@@ -14,9 +14,16 @@ void change_byte_by_char(Byte & bt, const char & ch){
     for (auto item : by2){
         bool bool_value = ((item == '0') ? false : true);
         bt.change_contents(count, bool_value);
+        
         count++;
     }
-};
+}
+
+
+Byte change_contents_outside(Byte & bt, const short &ix, bool new_item){
+    bt.change_contents(ix, new_item);
+    return bt;
+}
 
 
 /*

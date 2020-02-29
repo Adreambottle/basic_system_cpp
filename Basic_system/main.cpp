@@ -24,8 +24,9 @@ int main() {
     
     RAM ram;
     ram.start();
+    
     int count = 100;
-    string s = "Zhou Yanan is the king of the world";
+    string s = "You've set the rules, their bitter taste";
     for(int i = 0; i != count; ++i){
         Byte bt = ram.contents[i];
         change_byte_by_char(bt, s[i]);

@@ -30,7 +30,7 @@
 
 void change_byte_by_char(Byte & bt, const char & ch);
 
-
+Byte change_contents_outside(Byte & bt, const short &ix, bool new_item);
 /*
 这部分是ASCII转化的函数
 */
