@@ -26,7 +26,7 @@ int main() {
     ram.start();
     
     int count = 100;
-    string s = "You've set the rules, their bitter taste";
+    string s = "Hello World!";
     for(int i = 0; i != count; ++i){
         Byte bt = ram.contents[i];
         change_byte_by_char(bt, s[i]);
