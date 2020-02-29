@@ -1,9 +1,9 @@
-https://github.com/Adreambottle/basic_system_cpp/blob/master/head_for_pjt.jpg
+![image](https://github.com/Adreambottle/basic_system_cpp/blob/master/head_for_pjt.jpg)
 # Basic System 的基本架构
 *by Daniel 2020-02-23*
 
-https://github.com/Adreambottle/basic_system_cpp/blob/master/total.png
-https://github.com/Adreambottle/basic_system_cpp/blob/master/Fake%20ROM%20and%20Code%20library.png
+![image](https://github.com/Adreambottle/basic_system_cpp/blob/master/total.png)
+![image](https://github.com/Adreambottle/basic_system_cpp/blob/master/Fake%20ROM%20and%20Code%20library.png)
 
 
 ### 一、基本结构
