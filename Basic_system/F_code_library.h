@@ -48,3 +48,4 @@ string char_to_binary_sys(const char &ch);
 char binary_to_char(const string & by2);
 
 #endif /* F_code_library_hpp */
+
