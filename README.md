@@ -1,4 +1,3 @@
-![image](https://github.com/Adreambottle/basic_system_cpp/blob/master/head_for_pjt.jpg)
 # Basic System 的基本架构
 *by Daniel 2020-02-23*
 
