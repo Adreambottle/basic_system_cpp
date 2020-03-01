@@ -27,8 +27,8 @@ public:
 public:
 
 //    const short unit_num = 8;
-    int length_num = 1024;
-    int layer_num = 3;
+    int length_num = 1024;   // 1K
+    int layer_num = 1024;
     vector<Byte> contents;
 
 };

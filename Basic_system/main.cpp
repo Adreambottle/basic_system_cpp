@@ -9,6 +9,8 @@
 
 
 #include "F_code_library.h"
+//#include "F_code_library.cpp"
+
 
 
 
@@ -26,7 +28,7 @@ int main() {
     ram.start();
     
     int count = 100;
-    string s = "Hello World!";
+    string s = "Gaoshen is a big goose";
     for(int i = 0; i != count; ++i){
         Byte bt = ram.contents[i];
         change_byte_by_char(bt, s[i]);

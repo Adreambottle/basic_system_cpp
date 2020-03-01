@@ -44,10 +44,6 @@ string char_to_binary_sys(const char &ch){
     return by2;
 }
 
-
-
-
-
 // Changing binary system into character
 // Unfinished
 
