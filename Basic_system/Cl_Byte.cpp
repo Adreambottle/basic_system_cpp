@@ -12,33 +12,6 @@
 #include "Header.h"
 
 
-//
-//class Byte{
-//
-//
-//
-//public:
-//
-//    inline void set_open() {
-//        used = true;
-//    }
-//    inline void set_closed() {
-//        contents = {0, 0, 0, 0, 0, 0, 0, 0};
-//        used = false;
-//    }
-//
-//    const ostream &show_contents(ostream &os) const;
-//    Byte & change_contents(const short &ix, bool new_item);
-//
-//
-//public:
-//    vector<bool> contents = {0, 0, 0, 0, 0, 0, 0, 0};
-//    const short sz = 8;
-//    bool used = false;
-//    int address = 0;
-//
-//};
-
 
 
 // this function is to show the contents of the byte

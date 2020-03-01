@@ -9,7 +9,7 @@
 //
 
 #include "Cl_RAM.h"
-#include "Cl_Byte.h"
+//#include "Cl_Byte.h"
 
 
 
@@ -18,8 +18,21 @@
 
 // Start the RAM
 
+//inline
+//RAM & RAM::start(){
+//    int count = 0;
+//    for(int i = 0; i != length_num; ++i){
+//        Byte bt;
+//        bt.address = count;
+//        contents.push_back(bt);
+//        ++ count;
+//    }
+//    return *this;
+//}
+
+
 inline
-RAM & RAM::start(){
+RAM & RAM::start_1(const int &ram_index){
     int count = 0;
     for(int i = 0; i != length_num; ++i){
         Byte bt;
@@ -27,9 +40,24 @@ RAM & RAM::start(){
         contents.push_back(bt);
         ++ count;
     }
+    idx = ram_index;
     return *this;
 }
 
+
+
+
+//inline
+//vector<RAM> & RAM::start_1(int pcs_num){
+//    int count = 0;
+//    for(int i = 0; i != length_num; ++i){
+//        Byte bt;
+//        bt.address = count;
+//        contents.push_back(bt);
+//        ++ count;
+//    }
+//    return ;
+//}
 
 // change the length of the RAM
 inline

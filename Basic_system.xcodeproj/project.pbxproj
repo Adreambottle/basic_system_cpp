@@ -13,6 +13,7 @@
 		659945992407C423001C46D1 /* Cl_Byte.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 659945972407C423001C46D1 /* Cl_Byte.cpp */; };
 		65F7470E2408057E00E5A602 /* Cl_ASCII.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65F7470C2408057E00E5A602 /* Cl_ASCII.cpp */; };
 		65F74711240A339E00E5A602 /* F_code_library.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65F7470F240A339E00E5A602 /* F_code_library.cpp */; };
+		65F74714240BAD2500E5A602 /* Cl_ROM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65F74712240BAD2500E5A602 /* Cl_ROM.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		65F7470D2408057E00E5A602 /* Cl_ASCII.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cl_ASCII.h; sourceTree = "<group>"; };
 		65F7470F240A339E00E5A602 /* F_code_library.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = F_code_library.cpp; sourceTree = "<group>"; };
 		65F74710240A339E00E5A602 /* F_code_library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = F_code_library.h; sourceTree = "<group>"; };
+		65F74712240BAD2500E5A602 /* Cl_ROM.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cl_ROM.cpp; sourceTree = "<group>"; };
+		65F74713240BAD2500E5A602 /* Cl_ROM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cl_ROM.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				65F7470C2408057E00E5A602 /* Cl_ASCII.cpp */,
 				659945902407BFAA001C46D1 /* Cl_RAM.h */,
 				659945912407BFAA001C46D1 /* Cl_RAM.cpp */,
+				65F74713240BAD2500E5A602 /* Cl_ROM.h */,
+				65F74712240BAD2500E5A602 /* Cl_ROM.cpp */,
 				659945982407C423001C46D1 /* Cl_Byte.h */,
 				659945972407C423001C46D1 /* Cl_Byte.cpp */,
 				659945942407C0F6001C46D1 /* BIOS.cpp */,
@@ -148,6 +153,7 @@
 			files = (
 				659945962407C0F6001C46D1 /* BIOS.cpp in Sources */,
 				6599458A2407BEE8001C46D1 /* main.cpp in Sources */,
+				65F74714240BAD2500E5A602 /* Cl_ROM.cpp in Sources */,
 				659945992407C423001C46D1 /* Cl_Byte.cpp in Sources */,
 				65F7470E2408057E00E5A602 /* Cl_ASCII.cpp in Sources */,
 				659945932407BFAA001C46D1 /* Cl_RAM.cpp in Sources */,

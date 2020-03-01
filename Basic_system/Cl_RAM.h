@@ -17,10 +17,11 @@
 class RAM{
 
 public:
-    RAM & start();     // Start the RAM
+//    RAM & start();     // Start the RAM
     RAM & restart();   // resart the RAM
     RAM & change_length(int new_length_num);
     RAM & change_layer(int new_layer_num);
+    RAM & start_1(const int &ram_index);
     
     
 
@@ -30,6 +31,7 @@ public:
     int length_num = 1024;   // 1K
     int layer_num = 1024;
     vector<Byte> contents;
+    int idx = 0;
 
 };
 

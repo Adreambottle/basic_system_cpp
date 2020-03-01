@@ -43,7 +43,8 @@ public:
     vector<bool> contents = {0, 0, 0, 0, 0, 0, 0, 0};
     const short sz = 8;
     bool used = false;
-    int address = 0;
+    int address = 0;   // 暂时没有使用
+    vector<int> index = {0, 0, 0};  // 用index来表示byte在ROM和RAM中的位置
     
 };
 

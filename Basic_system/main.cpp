@@ -13,29 +13,45 @@
 
 
 
+//vector<RAM> build_RAM(const int &RAM_num = 3){
+//    vector<RAM> RAM_vec;
+//    for (int i = 0; i != RAM_num; ++i){
+//        RAM ram;
+//        ram.start_1(i);
+//        RAM_vec.push_back(ram);
+//    }
+//    return RAM_vec;
+//}
+
+
+//void change(vector<int> &vi, const int &i, const int &value){
+//    vi[i] = value;
+//}
 
 int main() {
     
+
+    
+    vector<RAM> ana_ram = build_RAM(1);
+    ram_report(ana_ram);
+    
+    vector<ROM> ana_rom = build_ROM(1);
+//    rom_report(ana_rom);
+    
+    write_in_ROM(ana_rom, 0, "This is a string");
+    
+    rom_usage(ana_rom[0]);
     
     
-    
-    
-//    Byte bt1;
-//    change_byte_by_char(bt1, 'a');
-//    bt1.show_contents(cout);
-    
-    RAM ram;
-    ram.start();
-    
-    int count = 100;
-    string s = "Gaoshen is a big goose";
-    for(int i = 0; i != count; ++i){
-        Byte bt = ram.contents[i];
-        change_byte_by_char(bt, s[i]);
-        bt.show_contents(cout);
-        if (i >= s.size()-1)
-            break;
-    }
+//    int count = 100;
+//    string s = "Gaoshen is a big goose";
+//    for(int i = 0; i != count; ++i){
+//        Byte bt = ram.contents[i];
+//        change_byte_by_char(bt, s[i]);
+//        bt.show_contents(cout);
+//        if (i >= s.size()-1)
+//            break;
+//    }
     
     
 //    const int MAXPATH=250;
