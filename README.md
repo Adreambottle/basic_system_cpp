@@ -1,3 +1,52 @@
+# The Work Principle
+
+## Differences between the basic system and the real OS
+
+#### 1. Stored in external environment
+Our system looks like a virtual machine and runs in an external environment. In other words, all our parts are stored in the real memory. The biggest difference between our system and the real system is that most of the instructions in our system need to be operated by external systems. The basic system we formed does not have permission to directly drive the CPU to do the calculation, so we can only take the use of the external system to drive CPU to process related instructions.
+
+For example, to modify the content of a specific byte in analog RAM, the function of our modified instruction has undergone the progress as 
+
+store in analog ROM >> 
+read to analog RAM >> 
+transfer to external real memory >> 
+become an executable C ++ instruction >> 
+pass to the CPU for operation and execution >> 
+CPU then modifies the specific byte
+
+#### 2. Using analog hardware (RAM, ROM)
+However, because our memory is just a simulated 2D array, it can only perform relatively simple operations, and can not perform too complicated operations. Because there is no underlying assembly language to complete the most basic computer instructions, we cannot load the relevant hardware drivers. In addition, because our memory and disk is a completely virtual 2D array, the instructions loaded in analog RAM cannot access the hardware drivers of external systems. 
+
+In order to simulate the process of real system operation, we thought of the following methods to mimic the operation management process of the operating system reading and writing virtual memory.
+
+## Methods of the simulation
+
+#### 1. Using ASCII encoding
+In order to find a one-to-one correspondence between the binary 0 and 1 storage format and natural language, we have adopted the internationally accepted ASCII encoding standard. For example, the encoding of the character 'a' is 97, then converted into a binary array is "01100001". We will use this 8-bit binary format array as one byte. Because ASCII has a total of 128 = 2 ^ 7 encodings, then a 7-bit encoding format is sufficient. But in order to follow the operating habits of computer systems, we use an 8-bit storage format. That is, each byte can store a separate character.
+
+Because our operating system is not very complicated, we did not consider reading and writing Chinese characters in the more complicated Unicode encoding. If you use the Unicode-8 encoding format, characters in different formats need 1-4 bytes to complete the one-to-one correspondence, which causes considerable trouble for our RAM index.
+
+#### 2. The storage location of the system is analog ROM
+Because the code of this project is also completely composed of standard characters in the ASCII range, we can store the code except the initialization part in the analog ROM. Every time the system is turned on, all instructions in the operating system are stored in the analog ROM in the form of an 8-bit binary array Then instructions are read into the analog RAM, been translated into executable C++ according to the ASCII encoding standard. The C++ code is passed to real memory and then passed to the CPU for execution.
+
+#### 3. Analog BIOS
+We can imitate the BIOS part of the real operating system and define the system initialization part as the BIOS of our system. When we simulate the boot process, that is, the process of starting to run our system in the external environment, only a small amount of codes of the basic system will be initialized in the external system. We call this part of the code an analog BIOS. The analog BIOS code is very intuitive and is displayed directly in the external environment.
+
+After the CPU in the external environment reads the analog BIOS, the analog BIOS initializes the analog RAM and the analog ROM, that is, our simulated hardware. This process simulates the process of loading the hardware driver by the BIOS in a real system. 
+
+That is, all the code parts except for the analog BIOS are packaged in  analog ROM, so that the real system's storage structure can be simulated: stored in the hard disk and loaded in memory. Therefore, our analog ROM will leave a sector to store our operating system.
+
+
+#### 4. Establish a valid path in analog ROM
+Each instruction will eventually become, to modify the Byte at a specific location in the virtual RAM.
+
+The difference between our analog RAM and analog ROM is that analog RAM will be restarted every time the program runs, restoring the state where all bits are 0; but the contents of the analog ROM will be saved.
+
+In order to read the contents stored in ROM, we need to establish a valid storage path in analog ROM.
+
+
+
+
 # Basic System 的基本架构
 *by Daniel 2020-02-23*
 
